@@ -32,14 +32,13 @@ on:
 
 
 #点☆Star触发开始编译
-    watch:
-      types: started
+  watch:
+    types: started
 
 
 env: 
   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
   SCKEY: ${{ secrets.SCKEY }}
-  GITHUB_RELEASE: https://github.com/281677160/Actions-OpenWrt/releases
   TZ: Asia/Shanghai
 
 jobs: 
@@ -55,7 +54,7 @@ jobs:
 
     steps:
     - name: 准备结束
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
  
     - name: 检测脚本设置
       run: |
